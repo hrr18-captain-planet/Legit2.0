@@ -2,7 +2,7 @@ var Sequelize = require('sequelize');
 var Promise = require('bluebird');
 var bcrypt = require('bcrypt-nodejs');
 var db = require('../database_config.js');
-
+// for teacher
 var User = db.define('User', {
   email: Sequelize.STRING,
   password: Sequelize.STRING,

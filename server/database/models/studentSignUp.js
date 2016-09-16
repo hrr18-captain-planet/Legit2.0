@@ -2,9 +2,9 @@
 // var Promise = require('bluebird');
 // var bcrypt = require('bcrypt-nodejs');
 // var db = require('../database_config.js');
-//
-// var Student = db.define('User', {
-//   email: Sequelize.STRING, //verify email
+// // for teacher
+// var StudentUser = db.define('User', {
+//   email: Sequelize.STRING,
 //   password: Sequelize.STRING,
 //   first: Sequelize.STRING,
 //   last: Sequelize.STRING
@@ -20,7 +20,7 @@
 //   }
 // });
 //
-// Student.beforeCreate(function (user) {
+// StudentUser.beforeCreate(function (user) {
 //   var cipher = Promise.promisify(bcrypt.hash);
 //   return cipher(user.password, null, null)
 //     .then(function (hash) {
@@ -28,15 +28,9 @@
 //     });
 // });
 //
-// module.exports = Student;
+// module.exports = StudentUser;
 
+// In this file we are comparing the attempted password with the stored hash password.
+// It will salt+ hash, and then compare the two.
 
-var Sequelize = require('sequelize');
-var db = require('../database_config.js');
-
-var Student = db.define('Student', {
-  first: Sequelize.STRING,
-  last: Sequelize.STRING
-});
-
-module.exports = Student;
+// Also have a pre save hook to cipher any password

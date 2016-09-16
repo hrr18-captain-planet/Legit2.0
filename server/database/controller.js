@@ -5,12 +5,16 @@ var Assignment = require('./models/assignment.js');
 var Section = require('./models/section.js');
 var Student = require('./models/student.js');
 var User = require('./models/user.js');
+// var StudentUser = require('./models/studentSignUp.js');
+
+
 
 var models = {
   assignments: Assignment,
   classes: Section,
   students: Student,
   users: User
+  // studentUser: StudentUser
 };
 
 // ============================================================================

@@ -6,5 +6,5 @@ var Section = db.define('Section', {
   grade: Sequelize.INTEGER,
   subject: Sequelize.STRING
 });
-
+// interface for teachers to add a new class
 module.exports = Section;
